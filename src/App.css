@@ -19,6 +19,24 @@ div {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+div:has(div:contains("Calculating")) {
+  color: #666;
+  font-style: italic;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
